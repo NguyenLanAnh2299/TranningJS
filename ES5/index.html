@@ -10,6 +10,7 @@
 
 <p id="demo"></p>
 <p id="forEach"></p>
+<p id="demo2"></p>
 
 <script>
 	//isArray
@@ -28,7 +29,6 @@ var sum = numbers.reduce(functionReduce);
 var sum = numbers.reduceRight(functionReduceRight);
 var allOver18 = numbers.every(functionEvery);
 
-
 numbers.forEach(myFunction);
 
 document.getElementById("forEach").innerHTML = txt;
@@ -37,6 +37,9 @@ document.getElementById("demo").innerHTML = over10;
 document.getElementById("demo").innerHTML = "The sum is " + sum;
 document.getElementById("demo").innerHTML = "The sum is " + sum;
 document.getElementById("demo").innerHTML = "All over 18 is " + allOver18;
+document.getElementById("demo1").innerHTML = Date.now();
+document.getElementById("demo2").innerHTML = d.getTime();
+
 
 
 function myFunctionEach(value) {
@@ -63,9 +66,43 @@ function functionEvery(value){
 	return value > 18;
 }
 //array.indexOf()
-function functionIndexOf(){
-	var a = numbers.indexOf("4");
-}
+// function functionIndexOf(){
+// 	var a = numbers.indexOf("4");
+// }
+</script>
+<!-- Property Getters and Setters -->
+<script>
+	var person = {
+		firstName: "John",
+		lastName : "Doe",
+		get fullName() {
+		return this.firstName + " " + this.lastName;
+		}
+	};
+	// Display data from the object using a getter:
+	document.getElementById("demo").innerHTML = person.fullName;
+</script>
+<!-- New Object Property Methods -->
+<script>
+// Create an Object:
+	var person = {
+	  firstName: "John",
+	  lastName : "Doe",
+	  language : "NO", 
+	};
+	// Change a Property:
+	Object.defineProperty(person, "language", {
+	  value: "EN",
+	  writable : true,
+	  enumerable : true,
+	  configurable : true
+	});
+	// Enumerate Properties
+	txt = "";
+	for (var x in person) {
+	  txt += person[x] + "<br>";
+	}
+	document.getElementById("demo").innerHTML = txt;
 </script>
 </body>
 </html>
