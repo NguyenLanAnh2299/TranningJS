@@ -1,0 +1,15 @@
+BOM: Browser Object Model: các đối tượng liên quan đến trình duyệt
+BOM gồm:
+	1. window: thuộc tính, phương thức riêng của trình duyệt
+	2. screen: là đối tượng chứa thông tin về màn hình của trình duyệt người dùng.
+	3. location: điều hướng và xử lý URL
+		- window.location.reload(url): tải lại trang web
+		- window.location.replace(urr) - ghi đè trang web
+		- window.location.assign(url) - load một trang mới
+	4. history: lịch sử trình duyệt
+		- history.back() : trở lại trang trước
+		- history.forward() : đi tới trang kế tiếp
+		- history.go(number): đi tới một trang:
+	5. navigator: được dùng để kiểm tra các thông tin về người dùng như trình duyệt đang sư dụng là gì
+	
+	

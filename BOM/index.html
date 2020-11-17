@@ -1,0 +1,55 @@
+<html>
+    <body>
+        <!-- Window -->
+        <script language="javascript">
+            var width = window.innerWidth
+                document.documentElement.clientWidth
+                document.body.clientWidth;
+          
+            var height = window.innerHeight
+                document.documentElement.clientHeight
+                document.body.clientHeight;
+          
+            document.write("Trình duyệt có chiều rộng là: " + width + "<br/>");
+            document.write("Trình duyệt có chiều cao là: " + height + "<br/>");   
+        </script>
+        <!-- Location -->
+        <p> BOM location</p>
+         <script language="javascript">
+            document.write("hash:" +window.location.hash + "<br/>");
+            document.write("host:" +window.location.host + "<br/>");
+            document.write("hostname:" +window.location.hostname + "<br/>");
+            document.write("href:" +window.location.href + "<br/>");
+            document.write("origin:" +window.location.origin + "<br/>");
+            document.write("pathname:" +window.location.pathname + "<br/>");
+            document.write("port:" +window.location.port + "<br/>");
+            document.write("search:" +window.location.search + "<br/>");
+      </script>
+
+      <!-- set cookie -->
+      <script >
+          // Hàm thiết lập Cookie
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+         
+        // Hàm lấy Cookie
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0; i<ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1);
+                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+            }
+            return "";
+        }
+      </script>
+    </body>
+
+    </body>
+</html>
+</script>
